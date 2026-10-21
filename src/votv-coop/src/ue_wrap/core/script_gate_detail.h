@@ -25,7 +25,9 @@ namespace R = ue_wrap::reflection;
 // probes under two slots. A name watch, class-scoped or not, holds two keyed slots, so the name table
 // takes 384 name watches: each peer of a two-peer smoke held 163-166, eighteen of them one lane's
 // device entries, and every polled state moved onto a watch adds its own.
-constexpr int kSlotBits = 11;
+// takes 384 name watches
+// takes 768 name watches
+constexpr int kSlotBits = 12;
 constexpr int kSlots = 1 << kSlotBits;
 constexpr int kMaxKeyed = kSlots * 3 / 8;
 
