@@ -75,7 +75,7 @@ jobs:
         run: git submodule update --init --recursive src/votv-coop/third_party
 
       - name: Config registry gate (arc 3 C5 -- dead rows / write-only / alias / ratchet surface)
-       continue-on-error: true
+        continue-on-error: true
         # Standing gate with fixture-injected must-fire controls each run; the
         # script exits explicitly (pwsh last-child-code lesson). Cheap text
         # scan -- runs before the expensive toolchain steps so a violation
